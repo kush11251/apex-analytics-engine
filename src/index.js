@@ -1,0 +1,6 @@
+const express = require('express');
+const app = express();
+const port = 3000;
+const metricsController = require('./controllers/metrics');
+app.use('/api/metrics', metricsController);
+app.listen(port, () => console.log(`Server listening on port ${port}`));
